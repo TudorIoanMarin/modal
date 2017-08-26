@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Toolbar </title>
+
+    <!-- Favincons -->
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <!-- Styles -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body class="view-one">
+    <button id="my-btn" type="button" name="button">Click me!</button>
+    <div id="my-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h3>Add Product</h3>
+          <h4>Second-hand Car</h4>
+          <h5>Automobiles</h5>
+        </div>
+        <div class="modal-body">
+          <form class="" action="index.html" method="post">
+            <div class="section-one clearfix">
+              <div class="part-one">
+                <!-- Title -->
+                <div class="group">
+                  <label for="title">Title</label>
+                  <input type="text" name="" id="title">
+                </div>
+
+                <!-- Brand -->
+                <div class="group">
+                  <label for="brand">Brand</label>
+                  <select class="" name="brand" id="brand">
+                    <option value="err" disabled selected>Choose one</option>
+                    <option value="renault">Renault</option>
+                    <option value="bmw">BemVe</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <!-- Year -->
+                <div class="group">
+                  <label for="year">Year</label>
+                  <input type="text" name="year" id="year">
+                </div>
+              </div>
+
+              <div class="part-two">
+                <!-- Mileage -->
+                <div class="group">
+                  <label for="mileage">Mileage</label>
+                  <input type="text" name="mileage" id="mileage">
+                </div>
+
+                <!-- Fuel -->
+                <div class="group">
+                  <label for="fuel">Fuel type</label>
+                  <input type="text" name="fuel" id="fuel">
+                </div>
+
+
+                <!-- Color -->
+                <div class="group">
+                  <label for="color">Color</label>
+                  <input type="text" name="color" id="color">
+                </div>
+              </div>
+            </div>
+            <div class="section-two" style="display: none;">
+
+              <div class="group merged">
+                <div class="sub-group first">
+                  <label for="damaged">Damaged</label>
+                  <input type="checkbox" name="damaged" id="damaged">
+                </div>
+                <div class="sub-group">
+                  <label for="price">Price</label>
+                  <input type="text" name="price" id="price">
+                  <select name="currency" id="currency">
+                    <option value="err" disabled selected>-</option>
+                    <option value="dolla">$</option>
+                    <option value="pund">£</option>
+                    <option value="euro">€</option>
+                    <option value="bitcoin">Ƀ</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="group related" style="display: none;">
+                <label for="related">Related</label>
+                <input type="text" name="related" id="related">
+              </div>
+
+              <!-- Currency -->
+              <div class="group">
+                <label for="description">Description</label>
+                <textarea name="name" rows="2" cols="23" id="description"></textarea>
+              </div>
+            </div>
+
+            <div class="messages">
+              <div class="selected-option">
+                <label>options:</label>
+                <div id="car-color"></div>
+                <div id="car-brand">
+                  <img src="" alt="Car Brand" style="display: none;">
+                </div>
+              </div>
+              <div id="error-messages">
+                <div id="req-err" style="display: none;">Fileds cannot bee empty.</div>
+                <div id="mil-err" style="display: none;">Mileage/Price must only contain numbers.</div>
+                <div id="year-err" style="display: none;">Year must be between 1950 and 2017.</div>
+              </div>
+            </div>
+            <button type="button" id="next">
+              Next
+            </button>
+            <button type="submit" id="submitBtn">
+              Submit
+            </button
+          </form>
+        </div>
+      </div>
+    </div>
+  <!-- Scripts and Plugins -->
+  <script src="js/app.js"></script>
+  </body>
+</html>

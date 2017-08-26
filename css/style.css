@@ -1,0 +1,238 @@
+@import 'normalize.css';
+
+/*********************/
+/*     Base Rules    */
+/*********************/
+body {
+  background: url('../img/background.jpg') top center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+p, h3, h4, h5 {
+  margin: 0;
+}
+
+input[type="text"], select, textarea {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  outline: none;
+  min-width: 270px;
+}
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  border-bottom: solid 2px #969696;
+}
+
+select {
+  background-color: #fff;
+  min-width: 290px;
+}
+
+button {
+  min-width: 150px;
+}
+/*********************/
+/*    Layout Rules   */
+/*********************/
+
+#my-btn {
+  position: absolute;
+  left: calc( 50% - 75px);
+  top: calc( 50% - 12px);
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 65%;
+  background: #fff;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+}
+
+.close{
+  position: absolute;
+  top: -4px;
+  right: 5px;
+}
+
+.modal-header {
+  padding: 1rem 0 2rem 0;
+}
+
+.modal-header h3, .modal-header h4, .modal-header h5 {
+  text-align: center;
+}
+
+.modal-header h3 {
+  padding: 1rem 0 .5rem 0;
+}
+
+.modal-body .section-one, .modal-body .section-two {
+  min-height: 20rem;
+}
+
+.modal-body .part-one, .modal-body .part-two {
+  width: 50%;
+  float: left;
+}
+
+.modal-body .group {
+  padding: .5rem 1rem;
+  display: block;
+}
+
+.modal-body .group label {
+  display: block;
+  padding-bottom: .5rem;
+}
+
+.modal-body .messages {
+  position: absolute;
+  bottom: -6%;
+  left: 1.5rem;
+  text-align: center;
+}
+
+#error-messages {
+  color: red;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.modal-body button#next {
+  position: absolute;
+  bottom: -15%;
+  left: calc( 50% - 75px );
+}
+
+.modal-body #submitBtn {
+  display: none;
+}
+
+.modal-body .merged .sub-group, .modal-body .merged input, .modal-body .merged label {
+  display: inline-block;
+}
+
+.modal-body .merged .sub-group {
+  position: relative;
+  margin: 0 .5rem 0 3rem;
+  top: 0;
+  left: 10%;
+}
+
+.modal-body .merged .first {
+    margin: 0 2rem 0 0;
+    left: 0;
+}
+
+.modal-body #price { min-width: 0; }
+
+.modal-body label[for="price"], .modal-body label[for="damaged"] { position: absolute; top: -10px; left: 0;}
+
+.modal-body label[for="damaged"] { top: -20px; left: 0px; }
+
+
+#currency {
+  width: 55px;
+  min-width: 0;
+}
+
+.modal-body input[name="related"], .modal-body .section-two .group textarea {
+  width: 90%;
+}
+
+#car-color {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+#car-brand {
+  max-width: 35px;
+  display: inline-block;
+}
+
+#car-brand img {
+  width: 100%;
+  height: auto;
+}
+
+body.view-two #next {
+  left: 10%;
+}
+
+body.view-two #submitBtn {
+  display: block;
+  position: absolute;
+  bottom: -15%;
+  right:10%;
+}
+
+
+/*********************/
+/*    State Rules    */
+/*********************/
+
+.modal.active {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  display: block; /* take this out*/
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.invalid {
+  border-bottom: solid 2px darkred !important;
+}
+
+.invalid:focus {
+  border-bottom: solid 2px red !important;
+}
+
+.valid {
+  border-bottom: solid 2px darkgreen !important;
+}
+
+.valid:focus {
+  border-bottom: solid 2px green !important;
+}
+
+/*********************/
+/*    Theme Rules    */
+/*********************/
+
+.modal {
+  overflow: auto;
+}
+
+.close {
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-header h3 {
+  font-size: 1.8rem;
+}
